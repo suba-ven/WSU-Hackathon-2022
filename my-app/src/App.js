@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './hackathonlogo.svg';
 import Button from '@mui/material/Button';
 import './App.css';
 import React, { Component } from 'react';
