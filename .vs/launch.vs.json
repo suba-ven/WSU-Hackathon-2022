@@ -1,0 +1,18 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "nodeDbg",
+      "name": "Building.jsx",
+      "project": "my-app\\src\\Building.jsx",
+      "projectTarget": ""
+    },
+    {
+      "type": "nodeDbg",
+      "name": "App.js",
+      "project": "my-app\\src\\App.js",
+      "projectTarget": ""
+    }
+  ]
+}
