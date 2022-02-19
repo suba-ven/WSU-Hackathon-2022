@@ -27,7 +27,7 @@ class Building extends Component {
     getAddress() {
         return this.#address;
     }
-    setOccupancy(maxOccupacy) {
+    setOccupancy(maxOccupancy) {
         this.#maxOccupancy = maxOccupancy;
     }
     getOccupancy() {
