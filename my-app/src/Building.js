@@ -1,6 +1,6 @@
+import React, { Component } from 'react'
 
-
-class building {
+class Building extends Component{
     
     constructor(name,address,maxOccupancy,organization,currentOccupancy,percentCapacity) {
     this.#name = name;
@@ -8,12 +8,12 @@ class building {
     this.#maxOccupancy = maxOccupancy;
     this.#organization = organization;
     this.#currentOccupancy = currentOccupancy;
-    this.#percentCapacity = percentCapacity;
+        this.#percentCapacity = percentCapacity;
 
     };
 
     setName(name) {
-
+        
     }
     getName() {
         return this.#name;
@@ -63,3 +63,5 @@ class building {
    
 
 }
+
+//export defualt Building;
