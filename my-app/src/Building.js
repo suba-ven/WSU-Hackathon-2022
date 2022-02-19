@@ -1,54 +1,56 @@
-import React, { Component } from 'react'
+import logo from './logo.svg';
+import Button from '@mui/material/Button';
+import './App.css';
+import React, { Component } from 'react';
 
-class Building extends Component{
-    
-    constructor(name,address,maxOccupancy,organization,currentOccupancy,percentCapacity) {
-    this.#name = name;
-    this.#address = address;
-    this.#maxOccupancy = maxOccupancy;
-    this.#organization = organization;
-    this.#currentOccupancy = currentOccupancy;
+class Building extends Component {
+
+    constructor(props, name, address, maxOccupancy, organization, currentOccupancy, percentCapacity) {
+        super(props);
+        this.#name = name;
+        this.#address = address;
+        this.#maxOccupancy = maxOccupancy;
+        this.#organization = organization;
+        this.#currentOccupancy = currentOccupancy;
         this.#percentCapacity = percentCapacity;
-
     };
 
     setName(name) {
-        
+
     }
     getName() {
         return this.#name;
     }
-    setName(address) {
+    setAddress(address) {
 
     }
-    getName() {
+    getAddress() {
         return this.#address;
     }
-    setName(maxOccupacy) {
+    setOccupancy(maxOccupacy) {
 
     }
-    getName() {
+    getOccupancy() {
         return this.#maxOccupancy;
     }
-    setName(organization) {
+    setOrganization(organization) {
 
     }
-    getName() {
+    getOrganization() {
         return this.#organization;
     }
-    setName(currentOccupancy) {
+    setCurrentOccupancy(currentOccupancy) {
 
     }
-    getName() {
+    getCurrentOccupancy() {
         return this.#currentOccupancy;
     }
-    setName(percentCapacity) {
+    setCapacity(percentCapacity) {
 
     }
-    getName() {
+    getCapacity() {
         return this.#percentCapacity;
     }
-
 
     #name;
     #address;
@@ -56,12 +58,11 @@ class Building extends Component{
     #organization;
     #currentOccupancy;
     #percentCapacity;
+        render() {
+            return (
+                    <Button variant = "contained"> If this displays then Building has been rendered! </Button>
+            );
+        }
+};
 
-
-    
-    
-   
-
-}
-
-//export defualt Building;
+export default Building;
