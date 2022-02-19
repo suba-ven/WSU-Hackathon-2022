@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project"
+    "\\my-app",
+    "\\my-app\\src"
   ],
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
