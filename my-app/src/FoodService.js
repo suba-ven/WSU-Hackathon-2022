@@ -21,7 +21,11 @@ class FoodService extends Building{
             currentArray.splice()
         }
     }
-
+    render() {
+        return (
+            <Button variant="contained"> If this displays then FoodService has been rendered! </Button>
+        );
+    }
     const currentArray = [];
 }
 

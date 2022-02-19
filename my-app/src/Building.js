@@ -16,37 +16,37 @@ class Building extends Component {
     };
 
     setName(name) {
-
+        this.#name = name;
     }
     getName() {
         return this.#name;
     }
     setAddress(address) {
-
+        this.#address = address;
     }
     getAddress() {
         return this.#address;
     }
     setOccupancy(maxOccupacy) {
-
+        this.#maxOccupancy = maxOccupancy;
     }
     getOccupancy() {
         return this.#maxOccupancy;
     }
     setOrganization(organization) {
-
+        this.#organization = organization;
     }
     getOrganization() {
         return this.#organization;
     }
     setCurrentOccupancy(currentOccupancy) {
-
+        this.#currentOccupancy = currentOccupancy;
     }
     getCurrentOccupancy() {
         return this.#currentOccupancy;
     }
     setCapacity(percentCapacity) {
-
+        this.#percentCapacity = percentCapacity;
     }
     getCapacity() {
         return this.#percentCapacity;

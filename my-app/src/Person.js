@@ -41,7 +41,11 @@ class Person {
             return true;
         }
     }
-
+    render() {
+        return (
+            <Button variant="contained"> If this displays then Person has been rendered! </Button>
+        );
+    }
 
     #id
     #swipeTime
