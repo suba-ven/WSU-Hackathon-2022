@@ -10,37 +10,39 @@ class FoodService extends Building{
 
     //calculate time based on purchase time
     //make profile to track eating time
-    //constructor(currentArray) {
-    //    //this.#getUnixTime = require('date-fns/getUnixTime');
-    //    this.#date = 1;
-    //}
-    //addPerson() {
-    //    //swiped
-    //   let id = 1;
+    constructor() {
+        this.#testCurID = 0;
+    
+    }
+    addPerson() {
+        //swiped
 
-    //    const tempPerson = new Person(1, getUnixTime(date), 2);
+        var date = Date();
 
-    //    this.currentArray.push(tempPerson);
-    //}
+        const tempPerson = new Person(this.#testCurID, date.getMinute(), date.getHour());
+
+        this.#testCurID++;
+
+        this.currentArray.push(tempPerson);
+    }
     //removePerson() {
     //    if (currentArray.killperson(getUnixTime(date))) {
     //        currentArray.splice()
     //    }
     //}
-    test() {
-         this.id = 1;
-    }
+
     
     render() {
         return (
-            <h1>{this.props.id} If this displays then FoodService has been rendered! </h1>
+            <h1>Current time: {this.props.hours}:{this.props.minutes}:{this.props.seconds}
+                Current time ms: {this.props.milli}</h1>
+            
+            
         );
     }
 
-    id
-    #date
-    #getUnixTime
-    //currentArray = [];
+    #testCurID
+    currentArray = new Array();
 }
 
 export default FoodService;

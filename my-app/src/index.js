@@ -14,7 +14,8 @@ ReactDOM.render(
     <React.StrictMode>
         <App />
         <Building />
-        <FoodService id={index.getTime()} />
+        <FoodService hours={index.getHours()} minutes={index.getMinutes()} seconds={index.getSeconds()} milli={index.getTime()} />
+       
         <Person />
   </React.StrictMode>,
   document.getElementById('root')
