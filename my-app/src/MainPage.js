@@ -1,13 +1,18 @@
 // JavaScript source code
 import logo from './hackathonlogo.svg';
 import './App.js'
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
+import DiningHallManager from './DiningHallManager.js'
+import VendorManager from './VendorManager.js'
 import './MainPage.css'
 import FoodService from './FoodService.js';
 import { Button } from '@mui/material';
 
 
 const MainPage = (props) => {
+    const [showDiningMenu, setShowDiningMenu] = useState(false);
+    const [showVendorMenu, setShowVendorMenu] = useState(false);
+    const [changeMenu, setChangeMenu] = useState(false);
 
         return (
             <div maxHeight="800px">
@@ -18,9 +23,20 @@ const MainPage = (props) => {
                 <body className="Main-body">
                     <div className="Main-map">
 
-                        <Button variant="text" style={{ maxWidth: '300px', minWidth: '49%', fontSize: '50px', color: "grey"}}> Dining Halls </Button>
-                        <Button variant="text" style={{ maxWidth: '300px', minWidth: '49%', fontSize: '50px', color: "grey"}}> Vendors </Button>
-                        
+                        {!changeMenu && <Button variant="text" style={{ maxWidth: '300px', minWidth: '49%', fontSize: '50px', color: "grey" }}
+                            onClick={() => {
+                                setShowDiningMenu(true);
+                                setChangeMenu(true);
+                            }}> Dining Halls </Button>}
+                        {!changeMenu && <Button variant="text" style={{ maxWidth: '300px', minWidth: '49%', fontSize: '50px', color: "grey" }}
+                            onClick={() => {
+                                setShowVendorMenu(true);
+                                setChangeMenu(true);
+                            }}>  Vendors </Button>}
+
+                        {showDiningMenu && <DiningHallManager />}
+                        {showVendorMenu && <VendorManager />}
+
                     </div>
                 </body>
             </div >
