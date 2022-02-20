@@ -9,9 +9,9 @@ const DiningHallManager = (props) => {
     return (
 
         <div className= "DiningHall">
-            <FoodService name="Southside Cafe" pf={50} co={35} mo={70} />
-            <FoodService name="Hillside Cafe" pf={75} co={60} mo={80}/>
-            <FoodService name="Northside Cafe" pf={25} co={25} mo={100}/>
+            <FoodService name="Southside Cafe" pf={70} co={35} mo={50} />
+            <FoodService name="Hillside Cafe" pf={100} co={70} mo={70}/>
+            <FoodService name="Northside Cafe" pf={50} co={30} mo={60}/>
 
         </div>
     );
