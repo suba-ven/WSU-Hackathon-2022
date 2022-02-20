@@ -65,14 +65,16 @@ class Person extends Component{
         var curDate = new Date();
 
         if (curDate.getMinutes() === this.#estCheckoutMinutes && curDate.getHours() === this.#estCheckoutHours) {
-            return true;
+            return this;
         }
     }
+
     render() {
         return (
             <Button variant="contained"> If this displays then Person has been rendered! </Button>
         );
     }
+
     //{ this.props = this.#id }
     #id
     #swipeTimeMinutes

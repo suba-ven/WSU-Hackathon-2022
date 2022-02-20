@@ -27,10 +27,10 @@ class Building extends Component {
     getAddress() {
         return this.#address;
     }
-    setOccupancy(maxOccupancy) {
+    setMaxOccupancy(maxOccupancy) {
         this.#maxOccupancy = maxOccupancy;
     }
-    getOccupancy() {
+    getMaxOccupancy() {
         return this.#maxOccupancy;
     }
     setOrganization(organization) {
@@ -45,10 +45,10 @@ class Building extends Component {
     getCurrentOccupancy() {
         return this.#currentOccupancy;
     }
-    setCapacity(percentCapacity) {
+    setPercentCapacity(percentCapacity) {
         this.#percentCapacity = percentCapacity;
     }
-    getCapacity() {
+    getPercentCapacity() {
         return this.#percentCapacity;
     }
 
