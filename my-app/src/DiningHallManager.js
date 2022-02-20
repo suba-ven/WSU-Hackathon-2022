@@ -3,15 +3,22 @@ import './App.js'
 import React, { Component, useState } from 'react'
 import './MainPage.css'
 import FoodService from './FoodService.js';
-import { Button } from '@mui/material';
-
+import Button from '@mui/material/Button';
 
 const DiningHallManager = (props) => {
     return (
-        <div maxHeight="800px">
-            DINING HALL
-        </div >
+        <div>
+            <FoodService/>
+        </div>
     )
 }
 
 export default DiningHallManager;
+
+/*
+            <FoodService name = "Southside Cafe" percentCapacity = "50"/>
+            <FoodService name = "Hillside Cafe "/>
+            <FoodService name="Northside Cafe" percentCapacity = "50"/>
+             <FoodService name="Hillside Cafe" percentCapacity = "50"/>
+             name={'Southside Cafe'}
+*/

@@ -1,6 +1,4 @@
 import Building from './Building.js'
-import Person from'./Person.js'
-import { compareAsc, format } from 'date-fns'
 import React, { Component, useState } from 'react';
 import Button from '@mui/material/Button';
 import './FoodService.css'
@@ -60,19 +58,23 @@ class FoodService extends Building{
         this.setCurrentOccupancy(this.timeArray.length());
         this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
     }
-
-
     
     render() {
         return (
-            <div className = "Food-center">
-                <h1> {this.props.name}</h1>
-                <h2>Percent Capacity: {this.props.percentCapacity}</h2>
-                {this.shouldKill && <Button/>}
+            <>
+            <div className="Food-center">
+                <h2> Percent Capacity: {this.props.percentFull} </h2>
+                
                 </div>
+                </>
         );
     }
+
     /*
+     *               <h1> {this.props.name}</h1>  
+
+     *                 {this.shouldKill && <Button/>}
+
      if(computerTime != date.getMinute())
      {
        re-render();
