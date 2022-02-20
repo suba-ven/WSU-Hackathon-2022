@@ -21,8 +21,7 @@ class FoodService extends Building{
     constructor(props) {
         super(props);
         this.date = Date();
-        this.#seed = 0;
-        this.#appTime = date.getMinute();
+        this.#appTime = this.date.getMinute();
          //this.shouldKill = false;
     }
     //addPerson() {
@@ -47,7 +46,7 @@ class FoodService extends Building{
     }
     updateTime() {
         if (this.date.getMinute() != this.#appTime) {
-            this.#appTime = date.getMinute();
+            this.#appTime = this.date.getMinute();
             this.timeArray.forEach(+1);
         }
     }
