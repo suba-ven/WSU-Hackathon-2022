@@ -1,41 +1,22 @@
-import Building from './Building.js'
-import Person from './Person.js'
-import { compareAsc, format } from 'date-fns'
-import React, { Component } from 'react';
-import Button from '@mui/material/Button';
+import logo from './hackathonlogo.svg';
+import './App.js'
+import React, { Component, useState } from 'react'
+import DiningHallManager from './DiningHallManager.js'
+import VendorManager from './VendorManager.js'
+import './MainPage.css'
+import FoodService from './FoodService.js';
+import { Button } from '@mui/material';
 
 
-class Clock extends Building {
-
-
-    //calculate time based on purchase time
-    //make profile to track eating time
-    constructor(props) {
-        super(props);
-        this.#testCurID = 0;
-
-    }
-    addPerson() {
-        //swiped
-
-        var date = Date();
-
-        const tempPerson = new Person(this.#testCurID, date.getMinute(), date.getHour());
-
-        this.#testCurID++;
-
-        //this.currentArray.push(tempPerson);
-    }
-
-
-    render() {
-        return (
-                <h1>Current time: {this.props.hours}:{this.props.minutes}</h1>
-        );
-    }
-
-    #testCurID
-    //currentArray = new Array();
+const Clock = (props) => {
+   
+    return (
+            <header className="Main-header">
+            <div className="Main-text-header"> Snapshot at {props.Hour}:{props.Minute}, refresh for a more up-to-date time</div>
+            </header>
+    )
 }
 
 export default Clock;
+
+//<div className="Main-text-header"> {this.prop.Hour}:{this.prop.Minute}</div>
