@@ -20,7 +20,7 @@ const App =(props)=>{
         <ThemeProvider theme={theme}>
             <div className="App">
                 {showSelect && <LandingPage props={showSelect} />}
-                {showSelect && <Button variant="outlined" size="large"
+                {showSelect && <Button variant="contained" size="large" color="error"
                     onClick={() => setShowSelect(false)}
                 > Enter
                 </Button>}

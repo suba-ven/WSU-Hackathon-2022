@@ -1,12 +1,11 @@
 import Building from './Building.js'
 import Person from './Person.js'
-import './FoodService.css';
 import { compareAsc, format } from 'date-fns'
 import React, { Component } from 'react';
 import Button from '@mui/material/Button';
 
 
-class FoodService extends Building{
+class Clock extends Building {
 
 
     //calculate time based on purchase time
@@ -14,7 +13,7 @@ class FoodService extends Building{
     constructor(props) {
         super(props);
         this.#testCurID = 0;
-    
+
     }
     addPerson() {
         //swiped
@@ -27,22 +26,11 @@ class FoodService extends Building{
 
         //this.currentArray.push(tempPerson);
     }
-    //removePerson() {
-    //    if (currentArray.killperson(getUnixTime(date))) {
-    //        currentArray.splice()
-    //    }
-    //}
 
-    
+
     render() {
         return (
-            <div backgroundColor="gray">
-
-                <h1 className="Food-main">
-                    <div className = "Food-center">{this.props.name}</div>
-                        </h1>
-                    <Button variant="contained"> If this displays then Building has been rendered! </Button>
-            </div>
+                <h1>Current time: {this.props.hours}:{this.props.minutes}</h1>
         );
     }
 
@@ -50,4 +38,4 @@ class FoodService extends Building{
     //currentArray = new Array();
 }
 
-export default FoodService;
+export default Clock;

@@ -60,7 +60,7 @@ class Building extends Component {
     #percentCapacity;
         render() {
             return (
-                    <Button variant = "contained"> If this displays then Building has been rendered! </Button>
+                    <Button variant="contained"> If this displays then Building has been rendered! </Button>
             );
         }
 };
