@@ -28,10 +28,9 @@ class FoodService extends Building{
     //}
 
     
-    
     render() {
         return (
-            <Button variant="contained"> If this displays then FoodService has been rendered! </Button>
+            <h1> If this displays then FoodService has been rendered! </h1>
         );
     }
 
