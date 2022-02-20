@@ -6,39 +6,15 @@ import FoodService from './FoodService.js';
 import Button from '@mui/material/Button';
 
 const DiningHallManager = (props) => {
-    const names = new Array();
-    const DiningHalls = new Array();
-
-    names = ["Northside", "Hillside", "Southside"];
-    names.forEach((name) => {
-       var newFoodService = new FoodService(props);
-        newFoodService.setName(name);
-        DiningHalls.push(newFoodService);
-        newFoodService.readFile()
-    })
-    //forea
-    //const DiningHalls = new Array();
-
-    //tempFoodService = new FoodService();
-
-    //DiningHalls.push(tempFoodService);
-
     return (
-        <div className="DiningHall">
-            {DiningHalls.map((hall, index) => (
-            <FoodService name={hall.name} pf={} />
-            ))}
+
+        <div className= "DiningHall">
+            <FoodService name="Southside Cafe" pf={50} co={35} mo={70} />
+            <FoodService name="Hillside Cafe" pf={75} co={60} mo={80}/>
+            <FoodService name="Northside Cafe" pf={25} co={25} mo={100}/>
 
         </div>
     );
 }
 
 export default DiningHallManager;
-
-/*
-            <FoodService name = "Southside Cafe" percentCapacity = "50"/>
-            <FoodService name = "Hillside Cafe "/>
-            <FoodService name="Northside Cafe" percentCapacity = "50"/>
-             <FoodService name="Hillside Cafe" percentCapacity = "50"/>
-             name={'Southside Cafe'}
-*/

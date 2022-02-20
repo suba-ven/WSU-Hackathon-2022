@@ -32,7 +32,7 @@ const MainPage = (props) => {
                             onClick={() => {
                                 setShowVendorMenu(true);
                                 setChangeMenu(true);
-                            }}>  Vendors </Button>}
+                            }}>  CUB Vendors </Button>}
 
                         {showDiningMenu && <DiningHallManager />}
                         {showVendorMenu && <VendorManager />}
