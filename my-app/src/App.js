@@ -1,6 +1,7 @@
 
 import './App.css';
 import LandingPage from './LandingPage.js'
+import MainPage from './MainPage.js'
 import React, { Component } from 'react';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
@@ -19,10 +20,11 @@ const App =(props)=>{
         <ThemeProvider theme={theme}>
             <div className="App">
                 {showSelect && <LandingPage props={showSelect} />}
-                <Button variant="outlined" size = "large"
+                {showSelect && <Button variant="outlined" size="large"
                     onClick={() => setShowSelect(false)}
                 > Enter
-                </Button>
+                </Button>}
+                {!showSelect && <MainPage/>}
             </div>
             </ThemeProvider>    
         );
