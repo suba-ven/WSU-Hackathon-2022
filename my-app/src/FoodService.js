@@ -23,13 +23,13 @@ class FoodService extends Building{
 
         this.#testCurID++;
 
-        //this.currentArray.push(tempPerson);
+        this.currentArray.push(tempPerson);
     }
-    //removePerson() {
-    //    if (currentArray.killperson(getUnixTime(date))) {
-    //        currentArray.splice()
-    //    }
-    //}
+    removePerson() {
+        if (currentArray.killperson(getUnixTime(date))) {
+            currentArray.splice()
+        }
+    }
 
     
     render() {
@@ -40,7 +40,7 @@ class FoodService extends Building{
     }
 
     #testCurID
-    //currentArray = new Array();
+    currentArray = new Array();
 }
 
 export default FoodService;
