@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Building from './Building';
+import Person from './Person';
+import FoodService from './FoodService';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
         <App />
-        <Building/>
+        <Building />
+        <FoodService />
+        <Person />
   </React.StrictMode>,
   document.getElementById('root')
 );
