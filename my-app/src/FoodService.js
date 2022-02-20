@@ -4,13 +4,12 @@ import Button from '@mui/material/Button';
 import './FoodService.css'
 
 class FoodService extends Building{
-    shouldKill  
+    /*shouldKill  */
 
-     date
-    #appTime
+    // date
+    //#appTime
   
-    capacityArray = new Array();
-    timeArray = new Array();
+    //timeArray = new Array();
    
 
 
@@ -18,8 +17,8 @@ class FoodService extends Building{
     //make profile to track eating time
     constructor(props) {
         super(props);
-        this.date = Date();
-        this.#appTime = this.date.getMinute();
+        //this.date = new Date();
+        //this.#appTime = this.date.getMinute();
          //this.shouldKill = false;
     }
     //addPerson() {
@@ -38,35 +37,34 @@ class FoodService extends Building{
     //        this.currentMap.delete(killPerson().getid());
             
         
+    ////}
+    //pushPerson() {
+    //    this.timeArray.push(0);
     //}
-    pushPerson() {
-        this.timeArray.push(0);
-    }
-    updateTime() {
-        if (this.date.getMinute() != this.#appTime) {
-            this.#appTime = this.date.getMinute();
-            this.timeArray.forEach(+1);
-        }
-    }
-    popPerson() {
-        if (this.timeArray[0] === 45) {
-            this.timeArray.shift();
-        }
-    }
-    correctOccupancy() {
-        //count people in building
-        this.setCurrentOccupancy(this.timeArray.length());
-        this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
-    }
+    //updateTime() {
+    //    if (this.date.getMinute() != this.#appTime) {
+    //        this.#appTime = this.date.getMinute();
+    //        this.timeArray.forEach(+1);
+    //    }
+    //}
+    //popPerson() {
+    //    if (this.timeArray[0] === 45) {
+    //        this.timeArray.shift();
+    //    }
+    //}
+    //correctOccupancy() {
+    //    //count people in building
+    //    this.setCurrentOccupancy(this.timeArray.length());
+    //    this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
+    //}
     
     render() {
         return (
-            <>
+            
             <div className="Food-center">
-                <h2> Percent Capacity: {this.props.percentFull} </h2>
+                <h1> Percent Capacity:  </h1>
+            </div>
                 
-                </div>
-                </>
         );
     }
 

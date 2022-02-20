@@ -1,16 +1,17 @@
 // JavaScript source code
 import './App.js'
 import React, { Component, useState } from 'react'
-import './MainPage.css'
+import './DiningHallManager.css'
 import FoodService from './FoodService.js';
 import Button from '@mui/material/Button';
 
 const DiningHallManager = (props) => {
     return (
+
         <div>
-            <FoodService/>
+        <FoodService  />
         </div>
-    )
+    );
 }
 
 export default DiningHallManager;
