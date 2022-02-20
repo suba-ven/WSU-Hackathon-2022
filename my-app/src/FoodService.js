@@ -6,8 +6,8 @@ import './FoodService.css'
 class FoodService extends Building{
     /*shouldKill  */
 
-    // date
-    //#appTime
+    date
+    #appTime
   
     //timeArray = new Array();
    
@@ -17,8 +17,8 @@ class FoodService extends Building{
     //make profile to track eating time
     constructor(props) {
         super(props);
-        //this.date = new Date();
-        //this.#appTime = this.date.getMinute();
+        this.date = new Date();
+        this.appTime = this.date.getMinutes();
          //this.shouldKill = false;
     }
     //addPerson() {
@@ -37,32 +37,33 @@ class FoodService extends Building{
     //        this.currentMap.delete(killPerson().getid());
             
         
-    ////}
-    //pushPerson() {
-    //    this.timeArray.push(0);
     //}
-    //updateTime() {
-    //    if (this.date.getMinute() != this.#appTime) {
-    //        this.#appTime = this.date.getMinute();
-    //        this.timeArray.forEach(+1);
-    //    }
-    //}
-    //popPerson() {
-    //    if (this.timeArray[0] === 45) {
-    //        this.timeArray.shift();
-    //    }
-    //}
-    //correctOccupancy() {
-    //    //count people in building
-    //    this.setCurrentOccupancy(this.timeArray.length());
-    //    this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
-    //}
+    pushPerson() {
+        this.timeArray.push(0);
+    }
+    updateTime() {
+        if (this.date.getMinute() != this.#appTime) {
+            this.#appTime = this.date.getMinutes();
+            this.timeArray.forEach(+1);
+        }
+    }
+    popPerson() {
+        if (this.timeArray[0] === 45) {
+            this.timeArray.shift();
+        }
+    }
+    correctOccupancy() {
+        //count people in building
+        this.setCurrentOccupancy(this.timeArray.length());
+        this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
+    }
     
     render() {
         return (
             
             <div className="Food-center">
-                <h1> Percent Capacity:  </h1>
+                <div>  {this.props.name} </div>
+                <h1> Percent Capacity:{this.props.pf}  </h1>
             </div>
                 
         );

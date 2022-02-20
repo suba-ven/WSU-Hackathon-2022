@@ -9,7 +9,7 @@ const DiningHallManager = (props) => {
     return (
 
         <div>
-        <FoodService  />
+            <FoodService name="Southside Cafe" pf={50} />
         </div>
     );
 }
