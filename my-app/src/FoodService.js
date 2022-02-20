@@ -11,8 +11,6 @@ class FoodService extends Building{
   
     timeArray = new Array();
    
-
-
     //calculate time based on purchase time
     //make profile to track eating time
     constructor(props) {
@@ -21,7 +19,8 @@ class FoodService extends Building{
         this.appTime = this.date.getMinutes();
          //this.shouldKill = false;
     }
-    //addPerson() {
+
+    // addPerson() {
     //    //swiped
 
     //    var date = Date();
@@ -37,6 +36,9 @@ class FoodService extends Building{
     //        this.currentMap.delete(killPerson().getid());
         
     //}
+
+
+
     pushPerson() {
         this.timeArray.push(0);
     }
@@ -64,6 +66,14 @@ class FoodService extends Building{
                 <h1> Percent Capacity:{this.props.pf}  </h1>
                 <h2> Current Occupancy: {this.props.co}</h2>
                 <h3> Max Occupancy: {this.props.mo} </h3>
+                <Button variant="outlined" color="error" onClick={
+                    fetch('data.txt')
+                        .then(function (response) {
+                            return response.text();
+                        }).then(function (data) {
+                            console.log(data);
+                        })
+                }> Predict </Button>
             </div>
                 
         );

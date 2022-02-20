@@ -18,11 +18,3 @@ const DiningHallManager = (props) => {
 }
 
 export default DiningHallManager;
-
-/*
-            <FoodService name = "Southside Cafe" percentCapacity = "50"/>
-            <FoodService name = "Hillside Cafe "/>
-            <FoodService name="Northside Cafe" percentCapacity = "50"/>
-             <FoodService name="Hillside Cafe" percentCapacity = "50"/>
-             name={'Southside Cafe'}
-*/
