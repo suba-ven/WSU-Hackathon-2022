@@ -8,36 +8,58 @@ import './FoodService.css'
 class FoodService extends Building{
     shouldKill  
 
-    #testCurID
-    currentMap = new Map();
+     date
+    #appTime
+  
+    capacityArray = new Array();
+    timeArray = new Array();
+   
+
+
     //calculate time based on purchase time
     //make profile to track eating time
     constructor(props) {
         super(props);
-    this.#testCurID = 0;
-         this.shouldKill = false;
+        this.date = Date();
+        this.#seed = 0;
+        this.#appTime = date.getMinute();
+         //this.shouldKill = false;
     }
-    addPerson() {
-        //swiped
+    //addPerson() {
+    //    //swiped
 
-        var date = Date();
+    //    var date = Date();
 
-        const tempPerson = new Person(this.#testCurID, date.getMinute(), date.getHour());
+    //    const tempPerson = new Person(this.#testCurID, date.getMinute(), date.getHour());
 
-        this.#testCurID++;
+    //    this.#testCurID++;
 
-        this.currentMap.set(this.#testCurID,{tempPerson});
-    }
-    removePerson() {
+    //    this.currentMap.set(this.#testCurID,{tempPerson});
+    //}
+    //removePerson() {
         
-            this.currentMap.delete(killPerson().getid());
+    //        this.currentMap.delete(killPerson().getid());
             
         
+    //}
+    pushPerson() {
+        this.timeArray.push(0);
+    }
+    updateTime() {
+        if (this.date.getMinute() != this.#appTime) {
+            this.#appTime = date.getMinute();
+            this.timeArray.forEach(+1);
+        }
+    }
+    popPerson() {
+        if (this.timeArray[0] === 45) {
+            this.timeArray.shift();
+        }
     }
     correctOccupancy() {
         //count people in building
-        this.setCurrentOccupancy(rawNumber);
-        this.setPercentCapacity(rawNumber / this.getMaxOccupancy);
+        this.setCurrentOccupancy(this.timeArray.length());
+        this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
     }
 
 
