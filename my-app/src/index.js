@@ -6,12 +6,15 @@ import Building from './Building';
 import Person from './Person';
 import FoodService from './FoodService';
 import reportWebVitals from './reportWebVitals';
+import { compareAsc, format } from 'date-fns';
+
+var index = new Date();
 
 ReactDOM.render(
     <React.StrictMode>
         <App />
         <Building />
-        <FoodService />
+        <FoodService id={index.getTime()} />
         <Person />
   </React.StrictMode>,
   document.getElementById('root')
