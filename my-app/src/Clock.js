@@ -12,7 +12,7 @@ const Clock = (props) => {
    
     return (
             <header className="Main-header">
-            <div className="Main-text-header"> {props.Hour}:{props.Minute}</div>
+            <div className="Main-text-header"> Snapshot at {props.Hour}:{props.Minute}, refresh for a more up-to-date time</div>
             </header>
     )
 }
