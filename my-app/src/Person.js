@@ -42,7 +42,8 @@ class Person extends Component{
     //}
     render() {
         return (
-            <Button variant="contained"> If this displays then Person has been rendered! </Button>
+            <Button variant="contained"> If this displays then {this.props.Date } Person has been rendered! </Button>
+            
         );
     }
     #id
