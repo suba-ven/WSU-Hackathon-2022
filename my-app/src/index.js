@@ -6,7 +6,6 @@ import Building from './Building';
 import Person from './Person';
 import FoodService from './FoodService';
 import reportWebVitals from './reportWebVitals';
-import { compareAsc, format } from 'date-fns';
 
 var index = new Date();
 
@@ -15,7 +14,6 @@ ReactDOM.render(
         <App />
         <Building />
         <FoodService hours={index.getHours()} minutes={index.getMinutes()} seconds={index.getSeconds()} milli={index.getTime()} />
-       
         <Person />
   </React.StrictMode>,
   document.getElementById('root')
@@ -27,3 +25,5 @@ ReactDOM.render(
 reportWebVitals();
 
 //        <Building name="hello" address="123" maxOccupancy='12' organization = "WSU" currentOccupancy = '12' percentCapacity ='12'/>
+
+//         <FoodService hours={index.getHours()} minutes={index.getMinutes()} seconds={index.getSeconds()} milli={index.getTime()} />

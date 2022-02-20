@@ -10,7 +10,8 @@ class FoodService extends Building{
 
     //calculate time based on purchase time
     //make profile to track eating time
-    constructor() {
+    constructor(props) {
+        super(props);
         this.#testCurID = 0;
     
     }
