@@ -9,7 +9,7 @@ class FoodService extends Building{
     date
     #appTime
   
-    //timeArray = new Array();
+    timeArray = new Array();
    
 
 
