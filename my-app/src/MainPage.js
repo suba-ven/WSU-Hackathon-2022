@@ -44,8 +44,3 @@ const MainPage = (props) => {
 }
 
 export default MainPage;
-
-
-// <FoodService name = "Northside Cafe" percentCapacity = "50"/>
-                        //<FoodService name = "Southside Cafe"/>
-                        //<FoodService name = "Hillside Cafe "/>

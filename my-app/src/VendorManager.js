@@ -1,17 +1,21 @@
 // JavaScript source code
 import './App.js'
 import React, { Component, useState } from 'react'
-import './MainPage.css'
+import './Vendor.css'
 import FoodService from './FoodService.js';
 import { Button } from '@mui/material';
 
 
-const VendorManager = (props) => {
+const VendorManager = () => {
     return (
         <div maxHeight="800px">
-            VENDORS
+            <FoodService name="Northside Cafe " />
         </div >
     )
 }
 
 export default VendorManager;
+
+/*
+            <FoodService name = "Southside Cafe" percentCapacity = "50"/>
+            <FoodService name = "Hillside Cafe "/>*/
