@@ -7,17 +7,10 @@ import FoodService from './FoodService.js';
 import { Button } from '@mui/material';
 
 
-class MainPage extends Component {
+const MainPage = (props) => {
 
-    constructor(props) {
-        super(props)
-
-    }
-    //     background-color: #282c34;
-
-    render() {
         return (
-            <div maxHeight="1000px">
+            <div maxHeight="800px">
                 <header className="Main-header">
                     <div className = "Main-text-header"> Wazzu Watch</div>
                     <img src={logo} className="Main-img" alt="logo" size = "20px"/>
@@ -32,7 +25,6 @@ class MainPage extends Component {
                 </body>
             </div >
         )
-    }
 }
 
 export default MainPage;
