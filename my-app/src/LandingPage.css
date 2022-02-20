@@ -3,6 +3,16 @@
     pointer-events: none;
 }
 
+.App-title-font {
+    font-size: calc(30px + 2vmin);
+    margin-top: -55px;
+}
+
+.Landing-body-font {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
 .App-header {
     background-color: #282c34;
     min-height: 100vh;

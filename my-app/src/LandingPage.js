@@ -12,19 +12,13 @@ class LandingPage extends Component {
         <div>
         <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload!woah!
+                    <p className = "App-title-font">
+                        Welcome to Wazzu Watch!
                     </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
+                    <body className = "Landing-body-font"> This project (descr.) </body>
+                    <Button variant="contained"> Enter
+                    </Button>
                 </header>
-        <Button variant="contained">Hello World</Button>;
         </div >
         )
 }
