@@ -66,22 +66,20 @@ class FoodService extends Building{
                 <h1> Percent Capacity:{this.props.pf}  </h1>
                 <h2> Current Occupancy: {this.props.co}</h2>
                 <h3> Max Occupancy: {this.props.mo} </h3>
-                <Button variant="outlined" color="error" onClick={
+                <Button variant="outlined" color="error" onClick={() => {
                     fetch('data.txt')
                         .then(function (response) {
                             return response.text();
                         }).then(function (data) {
-                            console.log(data);
-                        })
-                }> Predict </Button>
+                            this.pushPerson();
+                            setTimeout(' ', (data * 1000));
+                })}}> Predict </Button>
             </div>
-                
         );
     }
 
     /*
      *               <h1> {this.props.name}</h1>  
-
      *                 {this.shouldKill && <Button/>}
      *                 
      //  <h2>Current time: {this.props.hours}:{this.props.minutes}:{this.props.seconds}
