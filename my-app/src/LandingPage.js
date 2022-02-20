@@ -19,7 +19,7 @@ class LandingPage extends Component {
                     <p className = "App-title-font">
                         Welcome to Wazzu Watch!
                     </p>
-                    <body className="Landing-body-font"> Tracker for capacity of buildings. Useful for people to plan meal times around crowd intensity </body>
+                    <body className="Landing-body-font"> Tracker for occupancy of buildings on campus. Useful for students to plan meal times around crowd intensity </body>
                 </header>
         </div >
         )

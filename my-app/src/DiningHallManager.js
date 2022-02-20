@@ -8,8 +8,11 @@ import Button from '@mui/material/Button';
 const DiningHallManager = (props) => {
     return (
 
-        <div>
+        <div className= "DiningHall">
             <FoodService name="Southside Cafe" pf={50} />
+            <FoodService name="Hillside Cafe" pf={75} />
+            <FoodService name="Northside Cafe" pf={25} />
+
         </div>
     );
 }

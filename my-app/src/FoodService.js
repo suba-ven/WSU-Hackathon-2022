@@ -35,7 +35,6 @@ class FoodService extends Building{
     //removePerson() {
         
     //        this.currentMap.delete(killPerson().getid());
-            
         
     //}
     pushPerson() {
@@ -72,13 +71,7 @@ class FoodService extends Building{
      *               <h1> {this.props.name}</h1>  
 
      *                 {this.shouldKill && <Button/>}
-
-     if(computerTime != date.getMinute())
-     {
-       re-render();
-       computerTime = date.getMinute();
-     }
-     
+     *                 
      //  <h2>Current time: {this.props.hours}:{this.props.minutes}:{this.props.seconds}
                 Current time ms: {this.props.milli}</h2>
      */
