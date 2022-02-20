@@ -62,6 +62,8 @@ class FoodService extends Building{
             <div className="Food-center">
                 <div>  {this.props.name} </div>
                 <h1> Percent Capacity:{this.props.pf}  </h1>
+                <h2> Current Occupancy: {this.props.co}</h2>
+                <h3> Max Occupancy: {this.props.mo} </h3>
             </div>
                 
         );
