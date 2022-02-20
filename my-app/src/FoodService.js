@@ -11,7 +11,7 @@ class FoodService extends Building{
      date
     #appTime
   
-    capacityArray = new Array();
+    
     timeArray = new Array();
    
 

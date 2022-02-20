@@ -12,9 +12,7 @@ var index = new Date();
 ReactDOM.render(
     <React.StrictMode>
         <App />
-        <Building />
-        <FoodService hours={index.getHours()} minutes={index.getMinutes()} seconds={index.getSeconds()} milli={index.getTime()} />
-        <Person />
+       
   </React.StrictMode>,
   document.getElementById('root')
 );
