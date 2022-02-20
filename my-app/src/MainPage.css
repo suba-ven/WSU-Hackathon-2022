@@ -1,7 +1,7 @@
 .Main-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-size: calc(20px + 2vmin);
     font-palette: dark;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,13 +30,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: whitesmoke;
+    background-color: lightgrey;
     height: 60%;
     width: 80%;
     margin-top: 20px;
 }
-
-
 
 .Main-img {
     margin-top: 10px;
