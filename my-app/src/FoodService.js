@@ -25,18 +25,13 @@ class FoodService extends Building{
     //    if (currentArray.killperson(getUnixtime(Date))) {
     //        currentArray.splice()
     //    }
-    //}
-
-    
+    //}    
     
     render() {
         return (
             <Button variant="contained"> If this displays then FoodService has been rendered! </Button>
         );
     }
-
-
-    //currentArray = Person[];
 }
 
 export default FoodService;
