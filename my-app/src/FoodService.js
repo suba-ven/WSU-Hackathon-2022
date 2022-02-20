@@ -1,31 +1,42 @@
 import Building from './Building.js'
 import Person from'./Person.js'
+import { compareAsc, format } from 'date-fns'
+import React, { Component } from 'react';
+import Button from '@mui/material/Button';
+
 
 class FoodService extends Building{
 
 
     //calculate time based on purchase time
     //make profile to track eating time
-    constructor(currentArray) {
+    //constructor(currentArray) {
         
+    //}
+    //addPerson() {
+    //    //swiped
+    //   let id = 1;
 
-    }
-    addPerson() {
-        //swiped
-        const tempPerson = new Person(id, swipeTime, estCheckout);
+    //    const tempPerson = new Person(id, getUnixtime(Date), estCheckout);
 
-        this.currentArray.push(tempPerson);
-    }
-    removePerson() {
-        if (killperson(globalTime)) {
-            currentArray.splice()
-        }
-    }
+    //    this.currentArray.push(tempPerson);
+    //}
+    //removePerson() {
+    //    if (currentArray.killperson(getUnixtime(Date))) {
+    //        currentArray.splice()
+    //    }
+    //}
+
+    
+    
     render() {
         return (
             <Button variant="contained"> If this displays then FoodService has been rendered! </Button>
         );
     }
-    const currentArray = [];
+
+
+    //currentArray = Person[];
 }
 
+export default FoodService;
