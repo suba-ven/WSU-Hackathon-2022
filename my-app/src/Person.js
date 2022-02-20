@@ -12,7 +12,8 @@ import Button from '@mui/material/Button';
 
 class Person extends Component{
 
-    counstructor(id, swipeTimeMinutes, swipeTimeHours) {
+    constructor(props, id, swipeTimeMinutes, swipeTimeHours) {
+        super(props);
         this.#id = id;
         this.#swipeTimeMinutes = swipeTimeMinutes;
         this.#swipeTimeHours = swipeTimeHours;
@@ -69,9 +70,10 @@ class Person extends Component{
     }
     render() {
         return (
-            <Button variant="contained"> If this displays then {this.props.Date } Person has been rendered! </Button>
+            <Button variant="contained"> If this displays then Person has been rendered! </Button>
         );
     }
+    //{ this.props = this.#id }
     #id
     #swipeTimeMinutes
     #swipeTimeHours

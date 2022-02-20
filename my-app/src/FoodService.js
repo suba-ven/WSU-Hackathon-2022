@@ -23,7 +23,7 @@ class FoodService extends Building{
 
         this.#testCurID++;
 
-        this.currentArray.push(tempPerson);
+        //this.currentArray.push(tempPerson);
     }
     //removePerson() {
     //    if (currentArray.killperson(getUnixTime(date))) {
@@ -35,14 +35,12 @@ class FoodService extends Building{
     render() {
         return (
             <h1>Current time: {this.props.hours}:{this.props.minutes}:{this.props.seconds}
-                Current time ms: {this.props.milli}</h1>
-            
-            
+                Current time ms: {this.props.milli}</h1>  
         );
     }
 
     #testCurID
-    currentArray = new Array();
+    //currentArray = new Array();
 }
 
 export default FoodService;
