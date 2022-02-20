@@ -57,7 +57,6 @@ class FoodService extends Building{
         this.setCurrentOccupancy(this.timeArray.length());
         this.setPercentCapacity(this.timeArray.length() / this.getMaxOccupancy);
     }
-    
     render() {
         return (
             
