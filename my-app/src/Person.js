@@ -12,43 +12,71 @@ import Button from '@mui/material/Button';
 
 class Person extends Component{
 
-    counstructor(id, swipeTime, estCheckout) {
+    counstructor(id, swipeTimeMinutes, swipeTimeHours) {
         this.#id = id;
-        this.#swipeTime = swipeTime;
-        this.#estCheckout = swipeTime + 45;
+        this.#swipeTimeMinutes = swipeTimeMinutes;
+        this.#swipeTimeHours = swipeTimeHours;
+        if (swipeTimeMinutes + 45 > 60) {
+
+            if (swipeTimeHours + 1 > 24) {
+                this.#estCheckoutHours = (this.#swipeTimeHours + 1) - 24;
+            }
+            else {
+                this.#estCheckoutHours = (this.#swipeTimeHours + 1);
+            }
+            this.#estCheckoutMinutes = (this.#swipeTimeMinutes + 45) - 60;
+        }
+        else {
+            this.#estCheckoutMinutes = (this.#swipeTimeMinutes + 45);
+        }
     }
-    //setestCheckout(estCheckout) {
-    //    this.#estCheckout = estCheckout;
-    //}
-    //getestCheckout() {
-    //    return this.#estCheckout;
-    //}
-    //setid(id) {
-    //    this.#id = id;
-    //}
-    //getid() {
-    //    return this.#id;
-    //}
-    //setswipeTime(swipeTime) {
-    //    this.#swipeTime = swipeTime;
-    //}
-    //getswipeTime() {
-    //    return this.#swipeTime;
-    //}
-    //killPerson(globalTime) {
-    //    if (globalTime === this.#estCheckout) {
-    //        return true;
-    //    }
-    //}
+    setestCheckoutMinutes(estCheckoutMinutes) {
+        this.#estCheckoutMinutes = estCheckoutMinutes;
+    }
+    getestCheckoutMinutes() {
+        return this.#estCheckoutMinutes;
+    }
+    setestCheckoutHours(estCheckoutHours) {
+        this.#estCheckoutHours = estCheckoutHours;
+    }
+    getestCheckoutHours() {
+        return this.#estCheckoutHours;
+    }
+    setid(id) {
+        this.#id = id;
+    }
+    getid() {
+        return this.#id;
+    }
+    setswipeTimeMinutes(swipeTimeMinutes) {
+        this.#swipeTimeMinutes = swipeTimeMinutes;
+    }
+    getswipeTimeMinutes() {
+        return this.#swipeTimeMinutes;
+    }
+    setswipeTimeHours(swipeTimeHours) {
+        this.#swipeTimeHours = swipeTimeHours;
+    }
+    getswipeTimeHours() {
+        return this.#swipeTimeHours;
+    }
+    killPerson() {
+        var curDate = new Date();
+
+        if (curDate.getMinutes() === this.#estCheckoutMinutes && curDate.getHours() === this.#estCheckoutHours) {
+            return true;
+        }
+    }
     render() {
         return (
             <Button variant="contained"> If this displays then {this.props.Date } Person has been rendered! </Button>
-            
         );
     }
     #id
-    #swipeTime
-    #estCheckout
+    #swipeTimeMinutes
+    #swipeTimeHours
+    #estCheckoutMinutes
+    #estCheckoutHours
 }
 
 export default Person;
