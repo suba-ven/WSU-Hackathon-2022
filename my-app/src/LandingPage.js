@@ -9,6 +9,7 @@ class LandingPage extends Component {
         super(props)
 
     }
+    //     background-color: #282c34;
 
     render() {
         return (
