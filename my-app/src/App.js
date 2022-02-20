@@ -2,6 +2,7 @@
 import './App.css';
 import LandingPage from './LandingPage.js'
 import MainPage from './MainPage.js'
+import Clock from './Clock.js'
 import React, { Component } from 'react';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
@@ -14,6 +15,8 @@ const theme = createTheme({
     },
 });
 const App =(props)=>{
+    var date = new Date();
+
     const [showSelect, setShowSelect] = useState(true);
 
     return (
@@ -24,6 +27,9 @@ const App =(props)=>{
                     onClick={() => setShowSelect(false)}
                 > Enter
                 </Button>}
+
+                {!showSelect && <Clock Hour={date.getHours()} Minute={date.getMinutes()} />}
+
                 {!showSelect && <MainPage/>}
             </div>
             </ThemeProvider>    
@@ -31,3 +37,4 @@ const App =(props)=>{
 }
 
 export default App;
+//{ !showSelect && <Clock Hour={Date().getHour()} Minurw={Date().getMinute()} /> }
