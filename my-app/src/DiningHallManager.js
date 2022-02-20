@@ -6,12 +6,28 @@ import FoodService from './FoodService.js';
 import Button from '@mui/material/Button';
 
 const DiningHallManager = (props) => {
-    return (
+    const names = new Array();
+    const DiningHalls = new Array();
 
-        <div className= "DiningHall">
-            <FoodService name="Southside Cafe" pf={50} />
-            <FoodService name="Hillside Cafe" pf={75} />
-            <FoodService name="Northside Cafe" pf={25} />
+    names = ["Northside", "Hillside", "Southside"];
+    names.forEach((name) => {
+       var newFoodService = new FoodService(props);
+        newFoodService.setName(name);
+        DiningHalls.push(newFoodService);
+        newFoodService.readFile()
+    })
+    //forea
+    //const DiningHalls = new Array();
+
+    //tempFoodService = new FoodService();
+
+    //DiningHalls.push(tempFoodService);
+
+    return (
+        <div className="DiningHall">
+            {DiningHalls.map((hall, index) => (
+            <FoodService name={hall.name} pf={} />
+            ))}
 
         </div>
     );
